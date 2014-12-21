@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/demo.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="demo-screen">
+        <img src="/public/img/ace-demo-bg.jpg" />
+      </div>
+      <div id="urge_rv"></div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    $('body').delay(200).animate({scrollTop: '400px'}, 2000);
+    </script>
+
+    <!-- below is the snippet you'd put on a merchant website -->
+    <script type="text/javascript">
+      // ######   EDIT LINES BELOW FOR YOUR SITE   ############
+      var urge_pid = 'BKek9SbVPn'; // urge product id
+
+      // ##########   DO NOT EDIT BELOW HERE   ################
+      (function() {
+          var urge = document.createElement('script'); urge.type = 'text/javascript';
+          urge.async = true;
+          urge.src = '//sharetheurge.github.io/urge.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(urge);
+      })();
+    </script>
+  </body>
+</html>

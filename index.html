@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Urge. A Social Product Reviews Widget.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Google Web Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="header-logo-image" src="img/urge-simple-logo.png"/></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/demo.html">Demo</a>
+                    </li>
+                    <li><a class="js-merchant-tab" href="javascript:void(0)">Merchants</a>
+                    </li>
+                    <li><a class="js-shopper-tab" href="javascript:void(0)">Shopper</a>
+                    </li>
+                    <li><a class="js-email-modal" href="javascript:void(0)">Sign Up/Login</a>
+                    </li>
+                    <li style="padding-top: 18px !important;">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ss14-team-313.divshot.io" data-text="Check out Urge Ratings and Reviews by TeamGoStatic" data-via="staticshowdown">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </li>
+                
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="intro-header">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <div class="intro-logo">
+                            <img src="img/logo-soft-corners-color-pop-red-only.png"/>
+                        </div>
+                        <hr class="intro-divider">
+                        <h1>Review anywhere.</h1>
+                        <h3>Discover, Urge, Share.</h3>
+                        <ul class="list-inline intro-social-buttons">
+                            <!--<li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                            </li>
+                            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Urge</span></a>
+                            </li>-->
+                            <li><a href="javascript:void(0)" class="js-email-modal btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Waitlist</span></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+    <div class="tab-wrapper clearfix">
+        <div id="js-tab-shoppers" class="shopper-tab col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <h3>For Shoppers</h2>
+        </div>
+        <div id="js-tab-merchant" class="merchant-tab active col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <h3>For Merchants</h3>
+        </div>
+    </div>
+<!-- START SHOPPER TAB -->
+ <div id="shopper-tab" style="display: none"> 
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Make the Internet Echo!</h2>
+                    <p class="lead">Review a product once - be heard around the web.</p>
+                    <p class="lead">Our widget is meant to be embedded anywhere a product is advertised or sold ensuring your voice can be heard.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" data-src="img/shopper-voice-img.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Learn from friends.</h2>
+                    <p class="lead">Connect your Facebook account to see the reviews of your friends first.</p>
+                    <p class="lead">Product reviews are more credible if you know the source. We make sure you see reviews from your friends first.</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" data-src="img/shopper-a-img.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Register &amp; <br>
+                        Start Reviewing!</h2>
+                    <p class="lead">More exciting features are on the way!</p>
+                    <p class="lead">Early adopters make the world go round.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" data-src="img/computer-man.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+</div>
+    <!-- /.content-section-a -->
+<!-- END SHOPPER TAB -->
+<!-- START MERCHANT TAB -->
+<div id="merchant-tab" class="tab-pane fade in active"> 
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Be credible.</h2>
+                    <p class="lead">An empty product review section makes users suspicious.</p>
+                    <p class="lead">Credible product reviews make customers more comfortable and likely to buy.</p>
+                    <p class="lead">Aggregate reviews on particular products from across the web to maximize your customer's experience!</p>
+                    <p class="lead"><i>Urge</i> them to buy from you!</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" data-src="img/credible-man.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Get traffic!</h2>
+                    <p class="lead">Merchants who embed the Urge widget on product pages will benefit from our community of shoppers.</p>
+                    <p class="lead">When a customer clicks on a product from our site - from their product list or from a shared review - we will direct <em>new</em> customers to your online store.</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" data-src="img/traffic-image.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Easy as pie<br> to manage!</h2>
+                    <p class="lead">Drop in a few lines of code and we handle the rest!</p>
+                    <p class="lead">We're constantly updating our application to make sure shoppers have the best possible experience creating and sharing product reviews.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" data-src="img/pie.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">It's Free!</h2>
+                    <p class="lead">Have robust and dynamic product information on your page without having to spend a dime.</p>
+                    <p class="lead"><em>Urge</em> will always have a free service tier, so don't hesitate to commit to us.</p>
+                    <p class="lead">Embed a community of smart shoppers in your site - and we'll take care of the rest!</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" data-src="img/celebration.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+</div>
+    <!-- /.content-section-a -->
+
+<!-- END MERCHANT TAB -->
+
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Sign up for updates.<br>Share the <i>Urge.</i></h2>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+                            <!--<li><a href="" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                            </li>
+                            <li><a href="" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Urge</span></a>
+                            </li>-->
+                            <li><a href="javascript:void(0)" class="js-email-modal btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Waitlist</span></a>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li><a href="/demo.html">Demo</a>
+                    </li>
+                    <li><a class="js-merchant-tab" href="javascript:void(0)">Merchants</a>
+                    </li>
+                    <li><a class="js-shopper-tab" href="javascript:void(0)">Shopper</a>
+                    </li>
+                    <li><a class="js-email-modal" href="javascript:void(0)">Sign Up/Login</a>
+                    </li>
+                    <li style="padding-top: 20px !important;">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ss14-team-313.divshot.io" data-text="Check out Urge Ratings and Reviews by TeamGoStatic" data-via="staticshowdown">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; ShareTheUrge.Com 2013. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="major-modal" style="display: none">
+        <div class="container">
+             <div class="modal-wrapper">
+                 <div class="logo-wrapper">
+                     <img src="img/logo-soft-corners-color-pop-red-only.png"/>
+                 </div>
+                 <h1 class="welcome-text">Welcome to <em>Urge</em>.</h1>
+                 <p class="lead">Join the mailing list for product updates.</p>
+                    <div id="newsletter-signup">
+                        <input type="text" class="form-control input-lg" placeholder="Email">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default btn-lg" type="button"><span class="fa fa-envelope fa-fw"></span> Submit</button>
+                        </span>
+                    </div>
+
+                 <p class="lead mt-15">Profiles, lists, discovery and <em>more</em> coming soon.</p>
+                 <button class="btn btn-sm btn-default mt-15 js-close-email-modal"><span class="fa fa-times-circle-o"></span> Close Modal</button>
+             </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+<script src="/bower_components/requirejs/require.js" data-main="/public/js/home-main"></script>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/unveil.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("img").unveil(200);
+
+  function shopperTab(e){
+    if(e==false){
+        var $checker = $("#js-tab-merchant");
+        var $clicked = $("#js-tab-shoppers");
+        var $other = $("#merchant-tab");
+        var $shower = $("#shopper-tab");
+        if($checker.hasClass('active')){
+            $checker.removeClass('active');
+            $clicked.addClass('active');
+            $other.hide();
+            $shower.show(); 
+            $('html, body').animate({
+                scrollTop: $shower.offset().top - 140
+            }, 2000);  
+        }else{
+            $('html, body').animate({
+                scrollTop: $shower.offset().top - 140
+            }, 2000); 
+        } 
+    }else{
+        var $checker = $("#js-tab-merchant");
+        var $clicked = $(e.currentTarget);
+        var $other = $("#merchant-tab");
+        var $shower = $("#shopper-tab");
+        if($checker.hasClass('active')){
+            $checker.removeClass('active');
+            $clicked.addClass('active');
+            $other.hide();
+            $shower.show();  
+    } 
+    }
+    
+  }
+
+  function merchantTab(e){
+    if(e==false){
+        var $checker = $("#js-tab-shoppers");
+        var $clicked = $("#js-tab-merchant");   
+        var $shower = $("#merchant-tab");
+        var $other = $("#shopper-tab");
+        if($checker.hasClass('active')){
+           $checker.removeClass('active');
+           $clicked.addClass('active');
+           $other.hide();
+           $shower.show();
+           $('html, body').animate({
+                scrollTop: $shower.offset().top - 140
+            }, 1000);  
+        }else{
+            $('html, body').animate({
+                scrollTop: $shower.offset().top - 140
+            }, 1000);  
+        }
+    }else{
+        var $checker = $("#js-tab-shoppers");
+        var $clicked = $(e.currentTarget);   
+        var $shower = $("#merchant-tab");
+        var $other = $("#shopper-tab");
+        if($checker.hasClass('active')){
+           $checker.removeClass('active');
+           $clicked.addClass('active');
+           $other.hide();
+           $shower.show();  
+        }
+    }
+  }
+
+  function showEmailModal(){
+    $("#major-modal").slideUp(500);
+    $("#major-modal").show();
+  }
+
+  function hideEmailModal(){
+    $("#major-modal").slideDown(500);
+    $("#major-modal").hide();
+  }
+
+
+  $("#js-tab-shoppers").click(function(e){
+    shopperTab(e);
+  });
+
+  $("#js-tab-merchant").click(function(e){
+    merchantTab(e);
+  });
+
+  $('.js-shopper-tab').click(function(){
+    shopperTab(false);
+    });
+
+  $('.js-merchant-tab').click(function(){
+    merchantTab(false);
+    });
+
+  $('.js-email-modal').click(function(){
+    showEmailModal();
+  });
+
+  $('.js-close-email-modal').click(function(){
+    hideEmailModal();
+  });
+});
+</script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Add custom CSS here -->
+    <link href="/public/css/widget.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container" id="reviews-list">
+
+
+        <div class="review-component-wrapper">
+            <div class="col-xs-2 col-sm-1 col-md-1">    
+                <div class="image-wrapper">
+                    <span class="fa fa-user"></span>
+                </div>
+            </div>
+            <div class="review col-xs-10 col-sm-11 col-md-11 col-lg-11 col-xl-11">
+                <div class="stars-wrapper">
+                   <span class="fa fa-star"></span>
+                   <span class="fa fa-star"></span>
+                   <span class="fa fa-star"></span>
+                   <span class="fa fa-star"></span>
+                   <span class="fa fa-star-o"></span>
+                   <span class="star-score">4/5</span>
+                </div>
+                <div class="username-wrapper">
+                    <p class="username">Ryan</p>
+                </div>
+                <div class="review-content">
+                    Applicake oat cake pie jelly-o tart gummies gingerbread chupa chups. Pudding lollipop gummi bears pastry marshmallow. Ice cream chocolate marshmallow tiramisu sweet tiramisu danish. Soufflé bonbon chupa chups apple pie lemon drops apple pie dessert danish dessert. Candy jelly beans tootsie roll. Liquorice powder caramels candy canes soufflé halvah. Lemon drops croissant bonbon icing sweet jujubes tootsie roll sesame snaps. Ice cream sweet brownie chocolate icing. Pastry applicake jelly beans ice cream. Candy gingerbread sweet roll.</br></br>
+                    Cotton candy bonbon macaroon candy gingerbread candy canes macaroon chupa chups halvah. Tiramisu cake tootsie roll toffee jelly beans gingerbread candy canes apple pie. Jelly sesame snaps pastry pastry candy canes marzipan sweet roll oat cake applicake. Danish croissant candy gingerbread jelly sesame snaps halvah. Chupa chups applicake macaroon. Donut topping jelly-o macaroon bear claw jelly jelly beans. Applicake sweet candy canes. Pudding pastry danish liquorice chocolate jelly.</br></br>
+                    Chocolate cake macaroon pudding. Lemon drops marshmallow jelly soufflé tootsie roll gingerbread cotton candy sweet tootsie roll. Cake donut apple pie biscuit fruitcake. Danish tart ice cream cotton candy sugar plum candy. Cotton candy tart gummi bears muffin dessert gummi bears unerdwear.com bear claw sweet roll. Fruitcake lemon drops oat cake tiramisu cheesecake donut macaroon wafer. Cake dragée sweet apple pie powder tootsie roll sugar plum chocolate bar apple pie. Toffee candy gingerbread tiramisu carrot cake unerdwear.com cheesecake.
+                </div>
+                <div class="review-options-bar"><a href="#like" class="btn btn-small btn-liked tooltipper" data-toggle="tooltip" data-placement="top" title="Helpful Review"><span class="fa fa-heart"></span></a> <a class="btn btn-small tooltipper" href="#share" data-toggle="tooltip" data-placement="top" title="Share this reiew"><span class="fa fa-share"></span></a><a class="btn btn-small tooltipper" href="#flag" data-toggle="tooltip" data-placement="top" title="Flag for review"><span class="fa fa-flag"></span></a></div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="/bower_components/requirejs/require.js" data-main="/tests/reviews-list-main"></script>
+    <script src="/bower_components/jquery/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".review-input .review-wrapper textarea").click(function(){
+            $(this).addClass("clicked");
+            //$(".post-as-wrapper").fadeOut(100);
+            //$(".urge-login-form-wrapper").fadeOut(100);
+            $(".review-stars").fadeIn(500);
+            $("#post-or-sign-up").delay(100).fadeIn(300);
+            $(".login-and-post-wrapper").fadeIn(500);
+        });
+        $(".review-stars").urgeMe();
+        $("#post-or-sign-up").click(function(){
+            $(".review-input .review-wrapper textarea").removeClass("clicked");
+            $(this).fadeOut(200);
+            $(".post-as-wrapper").delay(200).fadeIn(500);
+        });
+        $("#urge-login").click(function(){
+            $("#facebook-login").css('opacity', .3);
+            $("#sign-up-wrapper").fadeOut(200);
+            $("#login-wrapper").delay(200).slideDown(200);
+            $("#login-wrapper").delay(200).fadeIn(200);
+
+        });
+        $(".sign-up-form input[type='text']").focus(function(){
+            $("#sign-up-row-hidden").fadeIn(100);
+        });
+
+        $(".js-show-signup").click(function(){
+            $("#facebook-login").css('opacity', 1);
+            $("#login-wrapper").fadeOut(200);
+            $("#sign-up-wrapper").delay(200).fadeOut(200);
+            $("#sign-up-wrapper").delay(200).slideDown(200);
+            
+        });
+
+        $('.tooltipper').tooltip();
+
+    });
+
+
+/*
+ * Urge Rating v1.0.0
+ * Adds star rating capability
+ *
+ */
+
+(function ($) {
+
+  $.fn.urgeMe = function(options) {
+    //Set Options
+    var settings = $.extend({
+          fullClass: "color-star",
+          hoverClass: "hover-star",
+          childClass: ".urgeStar"
+        }, options );
+
+    var $this = $(this);
+    var domArray = $this.children(settings.childClass);
+
+    return this.children(settings.childClass).each(function() {
+        var $this = $(this);
+        setClick($this, domArray);
+        setHover($this, domArray);
+        setMouseout();
+    });
+
+
+    // Create Click To Set Class And
+    function setClick(element, domArray){
+      $(element).on('click', function(e){
+        $(domArray).each(function(){
+            $(this).removeClass(settings.fullClass);
+        });
+
+        var spot = domArray.index(element) + 1;
+        console.log(spot);
+        $('.review-stars').children(settings.childClass).removeClass(settings.hoverClass);
+        var i = 0;
+        do{
+            $(domArray[i]).addClass(settings.fullClass);
+            $(domArray[i]).removeClass('.fa-star-half-o');
+            i++;
+        }while(i<spot)
+      });
+    }
+
+    function setHover(element, domArray){
+        $(element).mouseover(
+        function(){
+
+        var spot = domArray.index(element) + 1;
+        var i = 0;
+        do{
+            $(domArray[i]).removeClass('.fa-star-half-o');
+            $(domArray[i]).addClass(settings.hoverClass);
+            i++;
+        }while(i<spot)
+      });
+  }
+
+    function setMouseout(){
+      $('.review-stars').mouseout(function(){
+          $(this).children(settings.childClass).removeClass(settings.hoverClass);
+      });
+  }
+}
+})(jQuery);
+
+
+    </script>
+
+</body>
+
+</html>

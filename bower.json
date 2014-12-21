@@ -1,0 +1,30 @@
+{
+  "name": "urge",
+  "version": "0.0.0",
+  "homepage": "http://ss14-team-313.divshot.io/",
+  "authors": [
+    "Colyn Brown",
+    "Ryan Hurst",
+    "Joe Fleming"
+  ],
+  "description": "Urge, build to StaticShowdown",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.8.0",
+    "requirejs": "~2.1.10",
+    "parse-js-sdk": "~1.2.16",
+    "js-md5": "~1.1.0",
+    "bootstrap": "~3.1.0",
+    "font-awesome": "~4.0.3",
+    "momentjs": "~2.5.1",
+    "tiny-emitter": "~0.1.12"
+  }
+}
